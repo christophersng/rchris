@@ -1,0 +1,14 @@
+Package: rchris
+Type: Package
+Title: My custom functions
+Version: 0.1.0
+Author: Christopher Sng
+Maintainer: <christopher.sng@nhs.net>
+Description: Custom functions for meeeee.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    grDevices,
+    stringr
+RoxygenNote: 7.3.1

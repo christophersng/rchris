@@ -5,13 +5,14 @@
 #' @param loc output location
 #' @param w width
 #' @param h height
+#' @param scaling scaling factor
 #'
 #' @return System output pdf
 #' @export
 #'
 #' @examples
 #' pl(hist(sample(1:50,200,replace=TRUE)))
-pl <-  function(x, plot.name = "",loc = "/Users/csng/work/rplots/", w=5, h=5){
+pl <-  function(x, plot.name = "",loc = "/Users/csng/work/rplots/", w=5, h=5,scaling = 1){
   current_time <- format(Sys.time(), "%Y%m%d_%H%M%S")
 
   if(plot.name == ""){
@@ -21,7 +22,10 @@ pl <-  function(x, plot.name = "",loc = "/Users/csng/work/rplots/", w=5, h=5){
 
   filename <- paste0(loc,"/plot", current_time, plot.name, ".pdf")
 
-  pdf(filename, w, h)
+  ws = w*scaling
+  hs = h*scaling
+
+  pdf(filename, ws, hs)
   print(x)
   dev.off()
   print(filename)

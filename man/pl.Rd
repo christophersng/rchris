@@ -4,7 +4,14 @@
 \alias{pl}
 \title{Plot function}
 \usage{
-pl(x, plot.name = "", loc = "/Users/csng/work/rplots/", w = 5, h = 5)
+pl(
+  x,
+  plot.name = "",
+  loc = "/Users/csng/work/rplots/",
+  w = 5,
+  h = 5,
+  scaling = 1
+)
 }
 \arguments{
 \item{x}{plot object}
@@ -16,6 +23,8 @@ pl(x, plot.name = "", loc = "/Users/csng/work/rplots/", w = 5, h = 5)
 \item{w}{width}
 
 \item{h}{height}
+
+\item{scaling}{scaling factor}
 }
 \value{
 System output pdf
